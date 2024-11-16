@@ -1,0 +1,399 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="868.8,2292.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C297DD35BAA_v2_sub_generateChatCompletion_Create.Bundle;assembly=C297DD35BAA_v2_sub_g.yoBEr18XMKQ1FhjKM2KiHwt2" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:uta="clr-namespace:UiPath.Twilio.Activities;assembly=UiPath.Twilio.Activities" xmlns:utam="clr-namespace:UiPath.Twilio.Activities.Models;assembly=UiPath.Twilio.Activities" xmlns:utia="clr-namespace:UiPath.Twilio.IntegrationService.Activities;assembly=UiPath.Twilio.IntegrationService.Activities" xmlns:utic="clr-namespace:UiPath.Twilio.IntegrationService.Client;assembly=UiPath.Twilio.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Twilio.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>UiPath.Twilio.Activities.Models</x:String>
+      <x:String>UiPath.Twilio.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Twilio.Activities.Dto</x:String>
+      <x:String>UiPath.ContactCenterIntegrations</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>C297DD35BAA_v2_sub_g.yoBEr18XMKQ1FhjKM2KiHwt2</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>C228A91D6AD_curated_.k4rFt1doJXS1UlDDckCkIO3</AssemblyReference>
+      <AssemblyReference>CCFD1EF3795_v2_sub_g.Jn3xDVse6N147gDW2UhQMi2</AssemblyReference>
+      <AssemblyReference>C941D5194B5_curated_.gQAXh1hFlmE1plwK22OsYv93</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.Twilio.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Twilio.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.ContactCenterIntegrations</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="772.8,2228" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="710.4,2139.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="ano" />
+        <Variable x:TypeArguments="x:String" Name="output" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="648,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter your query's" Title="LawBot">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="x:String">[ano]</OutArgument>
+        </ui:InputDialog.Result>
+      </ui:InputDialog>
+      <isactr:ConnectorActivity Configuration="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" ConnectionId="b5f3f1dc-61b5-4ca6-987e-49cfd1ef3795" DisplayName="Content Generation" sap:VirtualizedContainerService.HintSize="648,424" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
+        <isactr:ConnectorActivity.FieldObjects>
+          <isactr:FieldObject Name="modelName" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:String">gpt-4o-2024-05-13</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="prompt" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[ano +"In indian constituition and in less than 1000 words in a paragraph  \n if the above query is not related to law or indian constitution reply as NOT  REALATED TO   LAW BOT "]</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="isPIIEnabled" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="isFilterPIIEnabled" Type="FieldArgument" />
+          <isactr:FieldObject Name="languageCode" Type="FieldArgument" />
+          <isactr:FieldObject Name="piiEntityCategories_array" Type="FieldArgument" />
+          <isactr:FieldObject Name="confidenceThreshold" Type="FieldArgument" />
+          <isactr:FieldObject Name="topK" Type="FieldArgument" />
+          <isactr:FieldObject Name="contextGrounding" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:String">None</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="topP" Type="FieldArgument" />
+          <isactr:FieldObject Name="_file" Type="FieldArgument" />
+          <isactr:FieldObject Name="indexID" Type="FieldArgument" />
+          <isactr:FieldObject Name="numberOfResults" Type="FieldArgument" />
+          <isactr:FieldObject Name="top_p" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:Int64">1</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="instruction" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:String">You are a helpful assistant</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="max_tokens" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:Int64" />
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="temperature" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:Double">1</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:Int64">0</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:Int64">0</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="n" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:Int64">1</InArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="_stop" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <InArgument x:TypeArguments="x:String" />
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="out_text" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <OutArgument x:TypeArguments="x:String">[output]</OutArgument>
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="out_maskedText" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <OutArgument x:TypeArguments="x:String" />
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="Jit_v2_sub_generateChatCompletion" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <OutArgument x:TypeArguments="uiascb:v2_sub_generateChatCompletion_Create" />
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+          <isactr:FieldObject Name="out_contextGroundingCitationsString" Type="FieldArgument">
+            <isactr:FieldObject.Value>
+              <OutArgument x:TypeArguments="x:String" />
+            </isactr:FieldObject.Value>
+          </isactr:FieldObject>
+        </isactr:ConnectorActivity.FieldObjects>
+      </isactr:ConnectorActivity>
+      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[output]" DisplayName="Send SMTP Mail Message" Email="nikhilofficial03@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="648,180.8" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Password="ljzd hica dvou nfys" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="care info" To="210701179@rajalakshmi.edu.in" UseOAuth="True">
+        <ui:SendMail.Files>
+          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+        </ui:SendMail.Files>
+      </ui:SendMail>
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="648,1040" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="612.8,929.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uta:TwilioScopeActivity AccountSid="AC0cddb4570fc0e69243bebb5f2d568eee" ApiKeySecret="8mRRmbgXLtORH5t9YfGybpNIucjz1Lae" ApiKeySid="SKabc48789abb2bb0b7de1ff3ba4c30f25" DisplayName="Twilio Scope" sap:VirtualizedContainerService.HintSize="550.4,840.8" sap2010:WorkflowViewState.IdRef="TwilioScopeActivity_3">
+              <uta:TwilioScopeActivity.Body>
+                <ActivityAction x:TypeArguments="utam:TwilioConnectionInfo">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="utam:TwilioConnectionInfo" Name="TwilioConnectInfo" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="513.6,731.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,362.4" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uta:MakeVoiceCallActivity Call="{x:Null}" PlayAudio="{x:Null}" TwiML="{x:Null}" DisplayName="Make Voice Call" From="+18594124360" sap:VirtualizedContainerService.HintSize="353.6,163.2" sap2010:WorkflowViewState.IdRef="MakeVoiceCallActivity_1" Say="message is on the way" To="+919943396496" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <utia:SendMessage ActivityInstanceId="e30f37b7-e01b-4568-ba82-399fefdbc654" BindingsVersion="2.1" BusinessEntityName="Messages" ConfiguredBusinessEntity="Messages" ConnectionId="b9bd1d1a-b81f-4d13-bfa8-55941d5194b5" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send Message" sap:VirtualizedContainerService.HintSize="451.2,280" sap2010:WorkflowViewState.IdRef="SendMessage_4">
+                      <utia:SendMessage.BusinessEntity>
+                        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID0}" Name="Messages">
+                          <uibi:BusinessEntity.AllFields>
+                            <scg:List x:TypeArguments="uibi:EntityField" Capacity="6">
+                              <uiisi:OperationEntityField x:TypeArguments="x:String" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" DisplayName="Sid" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="True" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Sid" ShouldFilterOnChange="False" />
+                              <uiisi:OperationEntityField x:TypeArguments="utic:Messages" ArgumentDirection="In" ArgumentType="utic:Messages" DataType="Messages" Description="The message to be sent to the receiver" DisplayName="Body" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body" ShouldFilterOnChange="False" />
+                              <x:Reference>__ReferenceID1</x:Reference>
+                              <x:Reference>__ReferenceID2</x:Reference>
+                              <x:Reference>__ReferenceID3</x:Reference>
+                              <x:Reference>__ReferenceID4</x:Reference>
+                            </scg:List>
+                          </uibi:BusinessEntity.AllFields>
+                          <uibi:BusinessEntity.EntityMetadata>
+                            <uibi:EntityMetadata DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages">
+                              <uibi:EntityMetadata.Metadata>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                                  <x:String x:Key="Object">Messages</x:String>
+                                  <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
+                                  <x:String x:Key="Operation">CreateMessage</x:String>
+                                  <x:String x:Key="Path">/Messages</x:String>
+                                </scg:Dictionary>
+                              </uibi:EntityMetadata.Metadata>
+                            </uibi:EntityMetadata>
+                          </uibi:BusinessEntity.EntityMetadata>
+                          <uibi:BusinessEntity.SelectedFields>
+                            <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
+                              <x:Reference>__ReferenceID2</x:Reference>
+                              <x:Reference>__ReferenceID3</x:Reference>
+                              <x:Reference>__ReferenceID4</x:Reference>
+                              <x:Reference>__ReferenceID1</x:Reference>
+                            </scg:List>
+                          </uibi:BusinessEntity.SelectedFields>
+                          <uibi:BusinessEntity.TelemetryProperties>
+                            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                          </uibi:BusinessEntity.TelemetryProperties>
+                        </uibi:BusinessEntity>
+                      </utia:SendMessage.BusinessEntity>
+                      <utia:SendMessage.CachedLookupValues>
+                        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+                      </utia:SendMessage.CachedLookupValues>
+                      <utia:SendMessage.DesignConnectionRequest>
+                        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="b9bd1d1a-b81f-4d13-bfa8-55941d5194b5" ConnectionName="Twilio" ConnectorKey="uipath-twilio-messaging">
+                          <uiisi:ConnectionParameters.TelemetryInfo>
+                            <uiisi:TelemetryInfo ActivityPack="UiPath.Twilio.IntegrationService.Activities" ActivityPackVersion="5.0.9" Source="StudioDesktop" />
+                          </uiisi:ConnectionParameters.TelemetryInfo>
+                        </uiisi:ConnectionParameters>
+                      </utia:SendMessage.DesignConnectionRequest>
+                      <utia:SendMessage.SelectedFields>
+                        <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
+                          <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The receiver’s phone number" DisplayName="To" FormDataType="ExpressionTextBox" InArgumentValue="+919943396496" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.to" Order="1" ShouldFilterOnChange="False">
+                            <uiisi:OperationEntityField.ArgumentValue>
+                              <InArgument x:TypeArguments="x:String">+919943396496</InArgument>
+                            </uiisi:OperationEntityField.ArgumentValue>
+                            <uiisi:OperationEntityField.Metadata>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                              </scg:Dictionary>
+                            </uiisi:OperationEntityField.Metadata>
+                            <uiisi:OperationEntityField.Value>
+                              <Literal x:TypeArguments="x:String">+919943396496</Literal>
+                            </uiisi:OperationEntityField.Value>
+                          </uiisi:OperationEntityField>
+                          <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The sender’s phone number that is registered with Twilio" DisplayName="From" FormDataType="ExpressionTextBox" InArgumentValue="+18594124360" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.from" Order="1" ShouldFilterOnChange="False">
+                            <uiisi:OperationEntityField.ArgumentValue>
+                              <InArgument x:TypeArguments="x:String">+18594124360</InArgument>
+                            </uiisi:OperationEntityField.ArgumentValue>
+                            <uiisi:OperationEntityField.Metadata>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                              </scg:Dictionary>
+                            </uiisi:OperationEntityField.Metadata>
+                            <uiisi:OperationEntityField.Value>
+                              <Literal x:TypeArguments="x:String">+18594124360</Literal>
+                            </uiisi:OperationEntityField.Value>
+                          </uiisi:OperationEntityField>
+                          <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The message to be sent to the receiver" DisplayName="Body" FormDataType="ExpressionTextBox" InArgumentValue="[output]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.body" Order="1" ShouldFilterOnChange="False">
+                            <uiisi:OperationEntityField.ArgumentValue>
+                              <InArgument x:TypeArguments="x:String">[output]</InArgument>
+                            </uiisi:OperationEntityField.ArgumentValue>
+                            <uiisi:OperationEntityField.Metadata>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                              </scg:Dictionary>
+                            </uiisi:OperationEntityField.Metadata>
+                            <uiisi:OperationEntityField.Value>
+                              <VisualBasicValue x:TypeArguments="x:String">[output]</VisualBasicValue>
+                            </uiisi:OperationEntityField.Value>
+                          </uiisi:OperationEntityField>
+                          <uiisi:OperationEntityField x:TypeArguments="utic:Messages" x:Name="__ReferenceID1" ArgumentDirection="Out" ArgumentType="utic:Messages" DataType="Messages" Description="The Messages object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False">
+                            <uiisi:OperationEntityField.Metadata>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+                              </scg:Dictionary>
+                            </uiisi:OperationEntityField.Metadata>
+                          </uiisi:OperationEntityField>
+                        </scg:List>
+                      </utia:SendMessage.SelectedFields>
+                      <utia:SendMessage.TelemetryProperties>
+                        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                      </utia:SendMessage.TelemetryProperties>
+                    </utia:SendMessage>
+                  </Sequence>
+                </ActivityAction>
+              </uta:TwilioScopeActivity.Body>
+            </uta:TwilioScopeActivity>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="648,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[output]" />
+    </Sequence>
+  </Sequence>
+</Activity>
